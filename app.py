@@ -21,7 +21,7 @@ st.markdown("""
 # --- SIDEBAR: SETTINGS ---
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/2328/2328966.png", width=50) # Horse icon
-    st.title("Decoy Troy Settings")
+    st.title("Decoy Troy")
     
     # API KEY HANDLING (STRICTLY FROM SECRETS)
     if "GOOGLE_API_KEY" in st.secrets:
@@ -131,4 +131,5 @@ if prompt := st.chat_input("Ex: Austin, TX 78704..."):
     # Process Response
     with st.chat_message("model"):
         message_placeholder = st.empty()
+
 
