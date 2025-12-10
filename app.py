@@ -26,13 +26,12 @@ with st.sidebar:
     # API KEY HANDLING (STRICTLY FROM SECRETS)
     if "GOOGLE_API_KEY" in st.secrets:
         api_key = st.secrets["GOOGLE_API_KEY"]
-        st.success("✅ API Key loaded securely")
+        
     else:
         st.error("❌ MISSING API KEY")
         st.warning("Please configure your 'secrets.toml' file or Streamlit Cloud Secrets with 'GOOGLE_API_KEY'.")
         st.stop()
 
-    st.info("This agent uses **Google Search** for real-time construction news and **Knowledge Files** for strategy.")
     
     # Reset Button
     if st.button("Reset Conversation"):
@@ -132,3 +131,4 @@ if prompt := st.chat_input("Ex: Austin, TX 78704..."):
     # Process Response
     with st.chat_message("model"):
         message_placeholder = st.empty()
+
