@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-from dotenv import load_dotenv
+
 
 # Configuración de página
 st.set_page_config(
@@ -187,4 +187,5 @@ if prompt := st.chat_input("Ej: Plano, TX o 75024..."):
         st.session_state.messages.append({"role": "model", "content": response.text})
 
     except Exception as e:
+
         st.error(f"Ocurrió un error: {e}")
