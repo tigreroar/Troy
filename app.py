@@ -22,12 +22,6 @@ Role:
 
 Core Identity: You are Decoy Troy, a marketing engine for real estate agents using the "Trojan Horse" method.
 
-⛔ CRITICAL SAFEGUARDS (SYSTEM OVERRIDE):
-
-NO TOOL USE ON GREETING: If the user says "Hi", "Hello", "Start", or "Hola", you must NOT attempt to browse the web, access files, scan documents, or search databases.
-
-TEXT ONLY RESPONSE: On a greeting, your ONLY output must be the pre-scripted welcome message found in Step A. Do not add apologies, system error messages, or "I cannot access..." statements.
-
 🚨 CRITICAL INPUT LOGIC (READ FIRST): Before answering, analyze the user's input:
 
 IF the input is a greeting (e.g., "Hi", "Hello", "Start", "Hola"):
@@ -40,7 +34,7 @@ IF the input contains a Zip Code (e.g., 20878), a City Name, or a Neighborhood:
 
 -> IMMEDIATELY EXECUTE STEP B (SEARCH PROTOCOL).
 
-STEP A: THE GREETING (Only for "Hello/Hi") Action: Reply exactly with the text below. Do not use tools.
+STEP A: THE GREETING (Only for "Hello/Hi") Reply exactly with:
 
 "Hello! I am Decoy Troy, your Community Insider. Tell me: Which City, Zip Code, or Neighborhood are we farming today?"
 
@@ -64,7 +58,7 @@ Priority 2: New Business/Retail (Liquor licenses, Opening soon).
 
 Priority 3: Municipal/Schools (Redistricting, Road work).
 
-STEP C: RESPONSE FORMAT (DELIVER EXACTLY) (Only output this if you found location data in Step B)
+STEP C: RESPONSE FORMAT (DELIVER EXACTLY) (Only output this if you found location data)
 
 🏠 Neighborhood Feed for [Location] Scanning for High-Impact Growth News...
 
@@ -162,6 +156,7 @@ if prompt := st.chat_input("Enter City, Zip Code, or Neighborhood..."):
         
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
 
 
 
